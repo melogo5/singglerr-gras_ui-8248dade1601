@@ -1,0 +1,613 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://bootstraptema.ru/snippets/effect/2017/ihover9/ihover.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(document).on('click', '.spoiler-trigger', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $(this).parent().find('.spoiler-block').first().slideToggle(300);
+  })
+  $(document).ready(function () {
+    $('.spoiler-body').hide();
+    $('.spoiler-title').click(function () {
+      $(this).next().toggle()
+    });
+  });
+</script>
+
+<style>
+  .navbar-brand {
+    position: relative;
+    z-index: 2;
+  }
+
+  .navbar-nav.navbar-right .btn {
+    position: relative;
+    z-index: 2;
+    padding: 4px 20px;
+    margin: 10px auto;
+  }
+
+  .navbar .navbar-collapse {
+    position: relative;
+  }
+
+  .navbar .nav-collapse {
+    padding-left: 100px;
+  }
+
+  .navbar.navbar-default .nav-collapse {
+    background-color: #f8f8f8;
+  }
+
+  .navbar.navbar-inverse .nav-collapse {
+    background-color: #222;
+  }
+
+  .btn.btn-circle {
+    border-radius: 50px;
+  }
+
+  .btn.btn-outline {
+    background-color: transparent;
+  }
+
+  .spoiler-trigger {
+    color: #0b70db;
+    text-decoration: none;
+    padding-left: 15px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAANUlEQVQoU2PkLrj9n4EAYAQp+jpBlRGXOpA8hiJ0TaQrwuY2kDNINwnmcKLchO5LuHWEwgkAlO5FBwhFaI8AAAAASUVORK5CYII=) no-repeat 0 50%;
+  }
+
+  .spoiler-trigger.active {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKklEQVQoU2PkLrj9n4EAYAQp+jpBlRGXOpA8DRRhcxvIGTSyjqDvCIUTAEcINQcERZkIAAAAAElFTkSuQmCC);
+  }
+
+  .spoiler-trigger>span {
+    border-bottom: 1px dashed #0b70db;
+    padding: 0 3px;
+  }
+
+  .spoiler-trigger:hover>span {
+    border-bottom-style: solid;
+  }
+
+  .spoiler-block {
+    display: none;
+  }
+
+  .trans {
+    opacity: 1;
+    /* Непрозрачность ячеек */
+    filter: alpha(Opacity=100);
+    /* Для IE */
+  }
+
+  table {
+    width: 75%;
+    table-layout: fixed;
+    /* Ширина таблицы */
+  }
+
+  .navbar-vertical-left {
+    position: absolute;
+    left: 2;
+    top: 62;
+    width: 100%;
+    width: 265px;
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .navbar-vertical-left ul.navbar-nav {
+    width: 400%;
+    height: 100%;
+    display: table;
+    margin: 0;
+  }
+
+  .navbar-vertical-left ul.navbar-nav:before,
+  .navbar-vertical-left ul.navbar-nav:after {
+    display: none;
+  }
+
+
+  .navbar-vertical-left ul.navbar-nav>li {
+    display: table-row;
+    float: none;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a>i.fa {
+    margin-right: 20px;
+  }
+
+  /* Цвета */
+
+  .navbar-vertical-left {
+    background: #ffffff;
+    color: #35ce96;
+    ;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a {
+    color: #35ce96;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a.one:hover,
+  .navbar-vertical-left ul.navbar-nav>li>a.one:active {
+    background: #f8f8f8;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a.two:hover,
+  .navbar-vertical-left ul.navbar-nav>li>a.two:active {
+    background: #f8f8f8;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a.tree:hover,
+  .navbar-vertical-left ul.navbar-nav>li>a.tree:active {
+    background: #f8f8f8;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a.for:hover,
+  .navbar-vertical-left ul.navbar-nav>li>a.for:active {
+    background: #f8f8f8;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a.five:hover,
+  .navbar-vertical-left ul.navbar-nav>li>a.five:active {
+    background: #f8f8f8;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a.six:hover,
+  .navbar-vertical-left ul.navbar-nav>li>a.six:active {
+    background: #f8f8f8;
+  }
+
+  .navbar-vertical-left ul.navbar-nav>li>a.selected {
+    background: #f8f8f8;
+  }
+
+  /* Анимация */
+
+  .navbar-vertical-left {
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    transition: transform .3s;
+
+    -webkit-transform: translateX(-220px);
+    -moz-transform: translateX(-220px);
+    transform: translateX(-220px);
+  }
+
+  .navbar-vertical-left:hover {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  .navbar-vertical-left ul.navbar-nav {
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    transition: transform .3s;
+
+    -webkit-transform: translateX(220px);
+    -moz-transform: translateX(220px);
+    transform: translateX(220px);
+  }
+
+  .navbar-vertical-left:hover ul.navbar-nav {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  .info h4 {
+
+    margin-left: 190px;
+    margin-right: 170px;
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .info h3 {
+    margin-left: 290px;
+    margin-right: 170px;
+    font-size: 19px;
+    padding-top: auto;
+  }
+
+  .info {
+    margin-left: 280px;
+
+  }
+
+  /* Изменения для разрешений */
+
+  @media(max-width: 768px) {
+    .navbar-vertical-left {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      height: auto;
+      width: 100%;
+    }
+
+    .navbar-vertical-left,
+    .navbar-vertical-left ul.navbar-nav {
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      transform: none;
+    }
+
+    .navbar-vertical-left ul.navbar-nav>li {
+      display: table-cell;
+    }
+
+
+    .navbar-vertical-left ul.navbar-nav>li>a>i.fa {
+      margin: 0;
+    }
+
+    .navbar-vertical-left ul.navbar-nav>li>a>span {
+      display: none;
+    }
+  }
+</style>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-header">
+        <div class="img"><img src="САГР2.jpg" alt="" width="60" height="60" /></div>
+      </div>
+      <a class="navbar-brand" href="#"><strong><big>Модуль "Ведение гериатрических карт"</big></strong></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="btn btn-default btn-outline btn-circle" data-toggle="collapse" href="#nav-collapse2"
+            aria-expanded="false" aria-controls="nav-collapse2">Войти</a>
+        </li>
+      </ul>
+      <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse2">
+        <form class="navbar-form navbar-right form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="Password">Password</label>
+            <input type="password" class="form-control" id="Password" placeholder="Password" required />
+          </div>
+
+        </form>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+<div class="container">
+
+  <div class="row">
+    <nav class="navbar navbar-vertical-left">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="карта.html" class="one">
+            <i class="fa fa-fw fa-lg fa-home"> </i>
+            <span>На главную</span>
+          </a>
+        </li>
+        <li>
+          <a href="архив.html" class="two">
+            <i class="fa fa-fw fa-lg fa-archive"></i>
+            <span>Архив карт</span>
+          </a>
+        </li>
+        <li>
+          <a href="общиесведения.html" class="two">
+            <i class="fa fa-fw fa-lg fa-medkit"></i>
+            <span>Общие сведения</span>
+          </a>
+        </li>
+        <li>
+          <a href="хронзаболевания.html" class="tree">
+            <i class="fa fa-fw fa-lg fa-heartbeat"></i>
+            <span>Хронические заболевания</span>
+          </a>
+        </li>
+        <li>
+          <a href="лекарственнаятерапия.html" class="for">
+            <i class="fa fa-fw fa-lg fa-stethoscope"></i>
+            <span>Лекарственная терапия</span>
+          </a>
+        </li>
+        <li>
+          <a href="лабисследования.html" class="five">
+            <i class="fa fa-fw fa-lg fa-hospital-o"></i>
+            <span>Лабораторные исследования</span>
+          </a>
+        </li>
+        <li>
+          <a href="динамометрия.html" class="five">
+            <i class="fa fa-fw fa-lg fa-plus-square"></i>
+            <span>Результаты динамометрии</span>
+          </a>
+        </li>
+        <li>
+          <a href="шкаладепрессии.html" class="five">
+            <i class="fa fa-fw fa-lg fa-line-chart"></i>
+            <span>Шкала депрессии</span>
+          </a>
+        </li>
+        <li>
+          <a href="индексбартел.html" class="five">
+            <i class="fa fa-fw fa-lg fa-bicycle"></i>
+            <span>Индекс Бартел</span>
+          </a>
+        </li>
+        <li>
+          <a href="тестчасов.html" class="five">
+            <i class="fa fa-fw fa-lg fa-clock-o "></i>
+            <span>Тест часов</span>
+          </a>
+        </li>
+        <li>
+          <a href="заключение.html" class="six">
+            <i class="fa fa-fw fa-lg fa-pencil-square-o"></i>
+            <span>Заключение гериатра</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="six">
+            <i class="fa fa-fw fa-lg fa-cog"></i>
+            <span>Настройки</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="info">
+  <h4><label col-form-label>Гериатрическая шкала депрессии</label></h4>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Шифр пациента</label>
+    <div class="col-sm-1">
+      <input type="text" id="price" required class="form-control">
+    </div>
+  </div>
+  <td class="trans">
+    <a href="#" class="spoiler-trigger"><span>Инструкция</span></a>
+    <div class="spoiler-block">Ответьте «Да» или «Нет» на вопросы ниже.
+
+    </div>
+  </td>
+  <table>
+    <tr>
+      <td>&nbsp;
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">1. В целом, удовлетворены ли Вы своей жизнью?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v11" name="v1" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v12" name="v1"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">2. Вы забросили большую часть своих занятий и интересов?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v21" name="v2" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v22" name="v2"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">3. Вы чувствуете, что Ваша жизнь пуста?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v31" name="v3" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v32" name="v3"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">4. Вам часто становится скучно?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v41" name="v4" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v42" name="v4"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">5. У вас хорошее настроение большую часть времени?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v51" name="v5" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v52" name="v5"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">6. Вы опасаетесь, что с Вами случится что-то плохое?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v61" name="v6" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v62" name="v6"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">7. Вы чувствуете себя счастливым большую часть времени?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v71" name="v7" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v72" name="v7"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">8. Вы чувствуете себя беспомощным?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v81" name="v8" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v82" name="v8"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">9. Вы предпочитаете остаться дома, нежели выйти на улицу и заняться
+            чем-нибудь новым?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v91" name="v9" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v92" name="v9"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">10. Считаете ли Вы, что Ваша память хуже, чем у других?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v101" name="v10" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v102" name="v10"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">11. Считаете ли Вы, что жить - это прекрасно?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v111" name="v11" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v112" name="v11"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">12. Чувствуете ли Вы себя сейчас бесполезным?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v121" name="v12" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v122" name="v12"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">13. Чувствуете ли Вы себя полным энергией и жизненной силой?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v131" name="v13" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v132" name="v13"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">14. Ощущаете ли вы безнадежность той ситуации, в которой находитесь в
+            настоящее время?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v141" name="v14" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v142" name="v14"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-9 col-form-label">15. Считаете ли Вы, что окружающие Вас люди живут более полноценной
+            жизнью в сравнении с Вами?</label>
+          <div class="form-check">
+            <label class="form-check-label"><input type="radio" id="v151" name="v15" checked> Да </label> <label
+              class="form-check-label"><input type="radio" id="v152" name="v15"> Нет </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">ФИО лица, заполнившего данные</label>
+          <div class="col-sm-7">
+            <input type="text" id="price" required class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">Дата заполнения</label>
+          <div class="col-sm-7">
+            <input type="date" class="form-control">
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="trans">
+        <div class="col-sm-3">
+          <button class="btn btn-block btn-success">Сохранить</button>
+        </div>
+        <div class="col-sm-5">
+          <button class="btn btn-block btn-info" onClick="fun()">Результат</button>
+          <br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="trans">
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">Результат</label>
+          <div class="col-sm-7">
+            <input type="text" id="res" required class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-3 col-form-label">Интерпретация</label>
+          <div class="col-sm-8">
+            <input type="text" id="risk" required class="form-control">
+          </div>
+        </div>
+      </td>
+    </tr>
+</div>
+<script>
+  function fun() {
+    var index = 0;
+    var interpretation;
+    if (document.getElementById("v12").checked) {
+      index++;
+    }
+    if (document.getElementById("v21").checked) {
+      index++;
+    }
+    if (document.getElementById("v31").checked) {
+      index++;
+    }
+    if (document.getElementById("v41").checked) {
+      index++;
+    }
+    if (document.getElementById("v52").checked) {
+      index++;
+    }
+    if (document.getElementById("v61").checked) {
+      index++;
+    }
+    if (document.getElementById("v72").checked) {
+      index++;
+    }
+    if (document.getElementById("v81").checked) {
+      index++;
+    }
+    if (document.getElementById("v91").checked) {
+      index++;
+    }
+    if (document.getElementById("v101").checked) {
+      index++;
+    }
+    if (document.getElementById("v112").checked) {
+      index++;
+    }
+    if (document.getElementById("v122").checked) {
+      index++;
+    }
+    if (document.getElementById("v132").checked) {
+      index++;
+    }
+    if (document.getElementById("v141").checked) {
+      index++;
+    }
+    if (document.getElementById("v151").checked) {
+      index++;
+    }
+
+    if (index < 6) {
+      interpretation = "Показатель теста до 5 баллов свидетельствует об отсутствии депрессии.";
+    } else {
+      interpretation = "Судя по ответам, Ваше состояние можно характеризовать как депрессию.";
+    }
+    document.getElementById("res").value = index;
+    document.getElementById("risk").value = interpretation;
+  }
+</script>
