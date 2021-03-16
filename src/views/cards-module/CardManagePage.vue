@@ -1,116 +1,7 @@
 
 <template>
   <div>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="navbar-header">
-            <div class="img"><img src="../../assets/cards-module/САГР2.jpg" alt="" width="60" height="60" /></div>
-          </div>
-          <a class="navbar-brand" href="ведениегериатрическойкарты.html"><strong><big>Модуль "Ведение гериатрических
-                карт"</big></strong></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-2">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a class="btn btn-default btn-outline btn-circle" data-toggle="collapse" href="#nav-collapse2"
-                aria-expanded="false" aria-controls="nav-collapse2">Войти</a>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
-    <div class="container">
-
-      <div class="row">
-        <nav class="navbar navbar-vertical-left">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="карта.html" class="one">
-                <i class="fa fa-fw fa-lg fa-home"> </i>
-                <span>На главную</span>
-              </a>
-            </li>
-            <li>
-              <a href="архив.html" class="two">
-                <i class="fa fa-fw fa-lg fa-archive"></i>
-                <span>Архив карт</span>
-              </a>
-            </li>
-            <li>
-              <a href="общиесведения.html" class="two">
-                <i class="fa fa-fw fa-lg fa-medkit"></i>
-                <span>Общие сведения</span>
-              </a>
-            </li>
-            <li>
-              <a href="хронзаболевания.html" class="tree">
-                <i class="fa fa-fw fa-lg fa-heartbeat"></i>
-                <span>Хронические заболевания</span>
-              </a>
-            </li>
-            <li>
-              <a href="лекарственнаятерапия.html" class="for">
-                <i class="fa fa-fw fa-lg fa-stethoscope"></i>
-                <span>Лекарственная терапия</span>
-              </a>
-            </li>
-            <li>
-              <a href="лабисследования.html" class="five">
-                <i class="fa fa-fw fa-lg fa-hospital-o"></i>
-                <span>Лабораторные исследования</span>
-              </a>
-            </li>
-            <li>
-              <a href="динамометрия.html" class="five">
-                <i class="fa fa-fw fa-lg fa-plus-square"></i>
-                <span>Результаты динамометрии</span>
-              </a>
-            </li>
-            <li>
-              <a href="шкаладепрессии.html" class="five">
-                <i class="fa fa-fw fa-lg fa-line-chart"></i>
-                <span>Шкала депрессии</span>
-              </a>
-            </li>
-            <li>
-              <a href="индексбартел.html" class="five">
-                <i class="fa fa-fw fa-lg fa-bicycle"></i>
-                <span>Индекс Бартел</span>
-              </a>
-            </li>
-            <li>
-              <a href="тестчасов.html" class="five">
-                <i class="fa fa-fw fa-lg fa-clock-o "></i>
-                <span>Тест часов</span>
-              </a>
-            </li>
-            <li>
-              <a href="заключение.html" class="six">
-                <i class="fa fa-fw fa-lg fa-pencil-square-o"></i>
-                <span>Заключение гериатра</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="six">
-                <i class="fa fa-fw fa-lg fa-cog"></i>
-                <span>Настройки</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
     <div class="info">
-
       <table>
         <tr>
           <td class="trans">
@@ -140,7 +31,7 @@
         <div class="img">
           <center><img src="../../assets/cards-module/архив.png" alt="" width="250" height="250" /></center>
         </div>
-        <a href="архив.html" class="tree">
+        <router-link to="/archive" class="tree">
           <button class="btn btn-block btn-info">Архив карт</button>
       </div>  
     </div>
@@ -321,11 +212,6 @@
     margin-right: -100px;
     font-size: 19px;
     padding-top: auto;
-  }
-
-  .info {
-    margin-left: 280px;
-
   }
 
   /* Изменения для разрешений */

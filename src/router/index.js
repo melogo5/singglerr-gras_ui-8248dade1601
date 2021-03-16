@@ -70,6 +70,67 @@ const router = new Router({
                             auth
                         ],
                     },
+
+                },
+                {
+                    path: "archive",
+                    component: () => import("../views/cards-module/Archive"),
+                    name: "Archive",
+                    meta: {
+                        middleware: [
+                            auth
+                        ],
+                    },
+                },
+                {
+                    path: "overall",
+                    component: () => import("../views/cards-module/Overall"),
+                    name: "Overall",
+                    meta: {
+                        middleware: [
+                            auth
+                        ],
+                    },
+                },
+                {
+                    path: "chronic",
+                    component: () => import("../views/cards-module/Chronic"),
+                    name: "Chronic",
+                    meta: {
+                        middleware: [
+                            auth
+                        ],
+                    },
+                },
+                {
+                    path: "therapy",
+                    component: () => import("../views/cards-module/Therapy"),
+                    name: "Therapy",
+                    meta: {
+                        middleware: [
+                            auth
+                        ],
+                    },
+                },
+                {
+                    path: "research",
+                    component: () => import("../views/cards-module/Research"),
+                    name: "Research",
+                    meta: {
+                        middleware: [
+                            auth
+                        ],
+                    },
+                },
+                {
+                    path: "dynamometry",
+                    component: () => import("../views/cards-module/Dynamometry"),
+                    name: "Dynamometry",
+                    meta: {
+                        middleware: [
+                            auth
+                        ],
+                    },
                 },
             ]
         },

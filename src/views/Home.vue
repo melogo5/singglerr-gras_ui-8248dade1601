@@ -12,17 +12,17 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand">
+                        <router-link to="/" class="navbar-brand">
                             <strong><big>СИСТЕМА АНАЛИЗА ГЕРИАТРИЧЕСКИХ РИСКОВ</big></strong>
-                        </a>
+                        </router-link>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-collapse-2">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a class="btn btn-default btn-outline btn-circle" data-toggle="collapse"
-                                    aria-expanded="false" aria-controls="nav-collapse2" @click="logout()">Выход</a>
+                                <router-link to="/" class="btn btn-default btn-outline btn-circle" data-toggle="collapse"
+                                    aria-expanded="false" aria-controls="nav-collapse2" @click="logout()">Выход</router-link>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -49,7 +49,7 @@
 
                     <div class="col-md-3 welcome-grid text-center">
                         <div class="ih-item circle effect9 left_to_right">
-                            <a href="/">
+                            <router-link to="/">
                                 <div class="img"><img src="../assets/статистический анализ данных1.jpg" alt="" /></div>
                                 <div class="info">
                                     <p class="delimiter">&nbsp;</p>
@@ -57,26 +57,26 @@
                                     <h4>Обработка информации для проведения медико-статистического анализа
                                         данных в гериатрии</h4>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
 
                     <div class="col-md-3 welcome-grid text-center">
                         <div class="ih-item circle effect9 left_to_right">
-                            <a href="/">
+                            <router-link to="/">
                                 <div class="img"><img src="../assets/гериатрические калькуляторы1.jpg" alt="" /></div>
                                 <div class="info">
                                     <p class="delimiter">&nbsp;</p>
                                     <h4>Оценка у больного гериатрических показателей физического и психического
                                         здоровья, социально-демографического статуса и др.</h4>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
 
                     <div class="col-md-3 welcome-grid text-center">
                         <div class="ih-item circle effect9 left_to_right">
-                            <a href="/">
+                            <router-link to="/">
                                 <div class="img"><img src="../assets/формирование методик лечения1.jpg" alt="" /></div>
                                 <div class="info">
                                     <p class="delimiter">&nbsp;</p>
@@ -84,7 +84,7 @@
                                     <h4>Построение и формализация множества схем лечения конкретной
                                         нозологии</h4>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
 
@@ -92,14 +92,14 @@
 
                     <div class="col-md-3 welcome-grid text-center">
                         <div class="ih-item circle effect9 left_to_right">
-                            <a href="/">
+                            <router-link to="/">
                                 <div class="img"><img src="../assets/оценка эффективности лечения1.jpg" alt="" /></div>
                                 <div class="info">
                                     <p class="delimiter">&nbsp;</p>
                                     <p class="delimiter">&nbsp;</p>
                                     <h4>Многокритериальная оценка эффективности врачебного вмешательства</h4>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
 
@@ -119,20 +119,20 @@
 
                     <div class="col-md-3 welcome-grid text-center">
                         <div class="ih-item circle effect9 left_to_right">
-                            <a href="/">
+                            <router-link to="/">
                                 <div class="img"><img src="../assets/формирование карт рисков1.jpg" alt="" /></div>
                                 <div class="info">
                                     <p class="delimiter">&nbsp;</p>
                                     <p class="delimiter">&nbsp;</p>
                                     <h4>Систематизация и визуализация рисков гериатрических больных</h4>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
 
                     <div class="col-md-3 welcome-grid text-center">
                         <div class="ih-item circle effect9 left_to_right">
-                            <a href="/">
+                            <router-link to="/">
                                 <div class="img"><img src="../assets/выбор лучшей методики лечения1.jpg" alt="A" />
                                 </div>
                                 <div class="info">
@@ -141,7 +141,7 @@
                                     <h4>Выбор лучшего для пациента набора лечебно-профилактических
                                         процедур</h4>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
 

@@ -21,8 +21,8 @@
                 </v-list-item-avatar>
 
                 <v-list-item-content>
-                    <v-list-item-title><h3>Система анализа</h3></v-list-item-title>
-                    <v-list-item-title><h3>гериатрических рисков</h3></v-list-item-title>
+                    <v-list-item-title><h3>Ведение</h3></v-list-item-title>
+                    <v-list-item-title><h3>гериатрических карт</h3></v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
 
@@ -58,6 +58,17 @@
                     {title: 'На главную', icon: 'mdi-home', to:"/"},
                     {title: 'О модуле', icon: 'mdi-information-outline', to:"/modules/cards/"},
 					{title: 'Параметры карточки', icon: 'mdi-information-outline', to:"/modules/cards/manage/"},
+                    {title: 'Архив карт', icon: 'mdi-information-outline', to:"/modules/cards/archive"},
+                    {title: 'Общие сведения', icon: 'mdi-information-outline', to:"/modules/cards/overall"},
+                    {title: 'Хронические заболевания', icon: 'mdi-information-outline', to:"/modules/cards/chronic"},
+                    {title: 'Лекарственная терапия', icon: 'mdi-information-outline', to:"/modules/cards/therapy"},
+                    {title: 'Лабораторные исследования', icon: 'mdi-information-outline', to:"/modules/cards/research"},
+                    {title: 'Результаты динамометрии', icon: 'mdi-information-outline', to:"/modules/cards/dynamometry"},
+                    {title: 'Шкала депрессии', icon: 'mdi-information-outline', to:"/modules/cards/depression"},
+                    {title: 'Индекс Бартел', icon: 'mdi-information-outline', to:"/modules/cards/bartel"},
+                    {title: 'Тест часов', icon: 'mdi-information-outline', to:"/modules/cards/clock"},
+                    {title: 'Заключение гериатра', icon: 'mdi-information-outline', to:"/modules/cards/conclusion"},
+                    {title: 'Настройки', icon: 'mdi-information-outline', to:"/modules/cards/settings"},
                 ],
                 color: 'primary',
                 right: false,
