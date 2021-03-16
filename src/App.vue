@@ -3,6 +3,9 @@
 </template>
 
 <script>
+    global.jQuery = require('jquery');
+    var $ = global.jQuery;
+    window.$ = $;
     export default {
         name: 'App',
 
@@ -11,7 +14,6 @@
         }),
     };
 </script>
-
 <style>
 
 </style>
